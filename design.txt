@@ -1,0 +1,60 @@
+This is a complex assignment, so I am writing this to
+organize my thoughts before I start coding.  The
+description below is taken from the acceptance
+criteria, as clarified by the animation video.
+
+The assignment requires a header, a section for content
+and a footer.  Thus, the top level React component
+should have these three parts.
+
+The header contains my name and these navigation titles:
+About Me, Portfolio, Contact and Résumé.  Initially
+About Me is highlighted and the About Me section is
+presented in the content area.  Clicking on another
+navigation title causes it to be highlighted and the
+appropriate section displayed in the content section.
+If the content section is too tall for the screen,
+it is OK for the navigation section to scroll off the screen.
+
+This suggests a state variable which chooses what to
+present in the content area.  Let's call this "section_name".
+It is set by clicking on a navigation title in the
+header.  When the header is displayed the navigation
+title whose name matches the value of section_name is
+presented with highlighting.  This can be done by
+conditional inclusion of a CSS class in the navigation
+title.
+
+The footer contains links to my GitHub, Linkedin and personal
+web site.
+
+The content component checks the value of section_name
+to choose which component to use to display the appropriate
+content.  That means that section_name must be a high-level
+state variable.  The header gets both section_name and 
+setSection_name so it can change the current section.
+Content gets only section_name in its props, because
+it cannot change the section name.  Footer doesn't need
+section_name at all.
+
+The four alternatives for Content are About_me, Portfolio,
+Contact and Résumé.  None of them need section_name.
+
+About_me contains just a picture and some text.
+
+Portfolio contains a picture for each application, which
+does not have to be a React application.  Each picture
+is accompanied by a link to its GitHub repository and
+a link to the deployed application.  This material can
+come from my existing portfolio.
+
+The Contact section is a form with fields for the sender's
+name, the sender's e-mail address and the body of the message.
+There is also a submit button.  The acceptance criteria
+doesn't say the submit button must work, and the video
+doesn't show it working, so perhaps I can just give
+a message saying contact me using your own e-mail
+facilities.
+
+The Résumé section has a link to download my résumé
+following my summary paragraph.
