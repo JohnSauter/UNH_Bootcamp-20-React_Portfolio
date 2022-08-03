@@ -12,6 +12,11 @@
   display: flex;
 }
 
+.form_container {
+  margin: 20px;
+  background: lightcyan;
+}
+
 .text_1 {
   text-align: justify;
   margin-right: auto;

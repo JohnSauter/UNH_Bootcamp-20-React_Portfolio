@@ -1,6 +1,8 @@
 /* The content part of the page  */
 import "./Content.css";
 import "../assets/images/John_headshot_2007_12_200_200.png";
+import "../assets/documents/Résumé.pdf";
+import Form from "./Form.js";
 
 export default function Content(props) {
   if (props.section_name === "About_me") {
@@ -38,8 +40,19 @@ export default function Content(props) {
       <div className="content_container">
         <p className="text_2">
           You can download my Résumé here:
-          <a href="../assets/documents/Résumé.pdf" target="_blank"> Résumé.pdf</a>
+          <a href="../assets/documents/Résumé.pdf" target="_blank">
+            {" "}
+            Résumé.pdf
+          </a>
         </p>
+      </div>
+    );
+  }
+
+  if (props.section_name === "Contact") {
+    return (
+      <div className="form_container">
+        <Form />
       </div>
     );
   }
