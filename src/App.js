@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <Header section_name={section_name} setSection_name={setSection_name} />
-      <Content setion_name={section_name} />
+      <Content section_name={section_name} />
       <Footer />
     </div>
   );
