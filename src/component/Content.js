@@ -1,8 +1,9 @@
 /* The content part of the page  */
 import "./Content.css";
-import "../assets/images/John_headshot_2007_12_200_200.png";
-import "../assets/documents/Résumé.pdf";
+// import "../assets/images/John_headshot_2007_12_200_200.png";
+// import "../assets/documents/Résumé.pdf";
 import Form from "./Form.js";
+import Portfolio from "./Portfolio.js";
 
 export default function Content(props) {
   if (props.section_name === "About_me") {
@@ -39,7 +40,15 @@ export default function Content(props) {
     return (
       <div className="content_container">
         <p className="text_2">
-          You can download my Résumé here:
+          With over 50 years of experience in the computer industry, my résumé
+          is quite long. I have worked as a system programmer for the Stanford
+          Artificial Intelligence project and for Sanders Associates, a military
+          contractor. I worked as a Software Engineer for Digital Equipment
+          Corporation, creating and maintaining products for a world-class
+          computer manufacturer.
+        </p>
+        <p className="text_2">
+          You can download my résumé here:
           <a href="../assets/documents/Résumé.pdf" target="_blank">
             {" "}
             Résumé.pdf
@@ -56,5 +65,10 @@ export default function Content(props) {
       </div>
     );
   }
+
+  if (props.section_name === "Portfolio") {
+    return <Portfolio />;
+  }
+
   return <div>other content: {props.section_name}</div>;
 }

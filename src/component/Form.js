@@ -41,7 +41,9 @@ function Form() {
       return;
     }
     
-    alert(`Hello ${userName}, no email for you.`);
+    alert(`Hello ${userName},` + 
+      " this interface does not actually send email." + 
+      "  You can email me at John_Sauter@systemeyescomputerstore.com.");
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setUserName('');
