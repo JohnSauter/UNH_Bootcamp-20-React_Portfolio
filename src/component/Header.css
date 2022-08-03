@@ -1,0 +1,12 @@
+/* CSS for Header.js  */
+
+/* Contrast selected and non-selected navigation items.  */
+
+.not_selected {
+  background: black;
+  color: white
+}
+.selected {
+  background: blue;
+  color: red
+}

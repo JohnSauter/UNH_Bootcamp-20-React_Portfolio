@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { Header, Content, Footer } from "./component";
 
-function App() {
+export default function App() {
+  const [section_name, setSection_name] = useState("About_me");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header section_name={section_name} setSection_name={setSection_name} />
+      <Content setion_name={section_name} />
+      <Footer />
     </div>
   );
 }
-
-export default App;
