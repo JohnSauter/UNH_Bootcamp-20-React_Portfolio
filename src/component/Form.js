@@ -1,16 +1,55 @@
-import React, { useState } from 'react';
-import './Form.css';
-
+import React, { useState } from "react";
+import "./Form.css";
 // Here we import a helper function that will check if the email is valid
-import { validateEmail } from '../utils/helpers';
+import { validateEmail } from "../utils/helpers";
 
-function Form() {
+import { useForm } from "react-hook-form";
+
+function Form(props) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <label htmlfor="userName">Name</label>
+        <input
+          placeholder="Name"
+          {...register("userName", { required: true })}
+        />
+        {errors.userName && <p>Name is required.</p>}
+      </div>
+      <div>
+        <label htmlfor="email">Email</label>
+        <input placeholder="Email" {...register("email", { required: true })} />
+        {errors.email && <p>email is required.</p>}
+      </div>
+      <div>
+        <label htmlfor="message">Message</label>
+        <input
+          placeholder="message"
+          {...register("message", { required: true })}
+        />
+        {errors.message && <p>A message is required.</p>}
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  );
+}
+
+function Old_Form(props) {
   // Create state variables for the fields in the form.
   // We are also setting their initial values to an empty string.
-  const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [message, setMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change.
@@ -19,9 +58,9 @@ function Form() {
     const inputValue = target.value;
 
     // Based on the input name, we set the state of either email, username, or message.
-    if (inputName === 'email') {
+    if (inputName === "email") {
       setEmail(inputValue);
-    } else if (inputName === 'userName') {
+    } else if (inputName === "userName") {
       setUserName(inputValue);
     } else {
       setMessage(inputValue);
@@ -32,36 +71,39 @@ function Form() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. 
+    // First we check to see if the email is not valid or if the userName is empty.
     // If so we set an error message to be displayed on the page.
     if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
-      // We want to exit out of this code block if something is wrong so that the user 
+      setErrorMessage("Email or username is invalid");
+      // We want to exit out of this code block if something is wrong so that the user
       // can correct it.
       return;
     }
-    
-    alert(`Hello ${userName},` + 
-      " this interface does not actually send email." + 
-      "  You can email me at John_Sauter@systemeyescomputerstore.com.");
+
+    alert(
+      `Hello ${userName},` +
+        " this interface does not actually send email." +
+        "  You can email me at John_Sauter@systemeyescomputerstore.com."
+    );
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setMessage('');
-    setEmail('');
+    setUserName("");
+    setMessage("");
+    setEmail("");
   };
 
   return (
     <div>
       <p>Contact</p>
       <form className="form">
-      <input
+        <input
           value={userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
           placeholder="your name"
-          autofocus
+          autoFocus
+          required
         />
         <input
           value={email}
@@ -70,7 +112,7 @@ function Form() {
           type="email"
           placeholder="your email address"
         />
-       
+
         <textarea
           value={message}
           name="message"
@@ -80,7 +122,9 @@ function Form() {
           required
           rows="20"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button type="button" onClick={handleFormSubmit}>
+          Submit
+        </button>
       </form>
       {errorMessage && (
         <div>
