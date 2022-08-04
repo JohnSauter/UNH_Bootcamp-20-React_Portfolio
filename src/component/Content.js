@@ -1,7 +1,6 @@
 /* The content part of the page  */
 import "./Content.css";
-// import "../assets/images/John_headshot_2007_12_200_200.png";
-// import "../assets/documents/Résumé.pdf";
+
 import Form from "./Form.js";
 import Portfolio from "./Portfolio.js";
 
@@ -48,10 +47,8 @@ export default function Content(props) {
           computer manufacturer.
         </p>
         <p className="text_2">
-          You can download my résumé here:
           <a href="../assets/documents/Résumé.pdf" target="_blank">
-            {" "}
-            Résumé.pdf
+            You can download my résumé by clicking here.
           </a>
         </p>
       </div>
@@ -67,7 +64,11 @@ export default function Content(props) {
   }
 
   if (props.section_name === "Portfolio") {
-    return <Portfolio />;
+    return (
+      <div className="content_container">
+        <Portfolio />
+      </div>
+    );
   }
 
   return <div>other content: {props.section_name}</div>;

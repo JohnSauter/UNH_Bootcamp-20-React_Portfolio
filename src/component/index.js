@@ -1,4 +1,4 @@
-/* Gather the components for App.  */
+/* Gather the top-level components for App.  */
 
 import Header from "./Header.js";
 import Content from "./Content.js";

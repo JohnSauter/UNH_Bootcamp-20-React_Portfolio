@@ -1,0 +1,49 @@
+/* CSS for Project.js */
+
+/* We have large and small projects.  However, we use mouseover
+ * to switch from small to large, and that causes trouble when
+ * the size of a project changes since that causes reflow, which
+ * can change the location of a project, moving it out from under
+ * the mouse.  Thus, the large and small projects must be the same
+ * size but can exchange border for margin, making them seem
+ * different.  */
+ 
+/* Each project is a column box.  */
+.project_container_large {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 10px solid red;
+  margin: 5px;
+}
+
+/* Each item within the project takes its own row.  */
+.project_item_large {
+  display: block;
+  margin: 5px;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+
+.project_container_small {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 5px solid green;
+  margin: 10px;
+}
+
+/* Each item within the project takes its own row.  */
+.project_item_small {
+  display: block;
+  margin: 5px;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+  max-width: 300px
+}

@@ -1,5 +1,7 @@
 /* CSS for Portfolio.js */
 
+/* The portfolio is a row box which can take multiple rows
+ * if necessary.  */
 .portfolio_container {
   background: lightcyan;
   display: flex;
@@ -8,23 +10,5 @@
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  padding: 20px;
-}
-
-.item_container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  align-items: center;
-  padding: 10px;
-  border: 10px solid green;
-  margin: 10px;
-}
-
-.item {
-  display: block;
-  margin: 5px;
-  margin-block-start: 5px;
-  margin-block-end: 5px;
+  margin: 20px;
 }

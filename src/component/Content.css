@@ -1,5 +1,7 @@
 /* CSS for Content.js  */
 
+/* Most content uses a row box that can take multiple
+ * rows if necessary.  */
 .content_container {
   margin: 20px;
   background: lightcyan;
@@ -9,14 +11,16 @@
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  display: flex;
 }
 
+/* However, the contact form uses a fixed space.  */
 .form_container {
   margin: 20px;
   background: lightcyan;
 }
 
+/* Limit the width of a paragraph so we can include a picture
+ * on the same line.  */
 .text_1 {
   text-align: justify;
   margin-right: auto;
