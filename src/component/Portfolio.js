@@ -45,7 +45,7 @@ function Portfolio(props) {
 
       <Project
         title="Horiseon"
-        image_href="./assets/images/Horiseon.png"
+        image_src="./assets/images/Horiseon.png"
         URL1="https://github.com/JohnSauter/UNH_bootcamp-01-Sauter-Horiseon"
         URL2="https://johnsauter.github.io/UNH_bootcamp-01-Sauter-Horiseon/"
       />
