@@ -18,9 +18,10 @@ function ContactForm(props) {
   const [emailWarnMessage, setEmailWarnMessage] = useState("");
   const [messageWarnMessage, setMessageWarnMessage] = useState("");
   const [warnMessage, setWarnMessage] = useState("");
+
   /* Function to handle a change in an input field.  */
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered
+    // Get the value and name of the input which triggered
     // the change.
     const { target } = e;
     const inputName = target.name;
@@ -40,8 +41,8 @@ function ContactForm(props) {
   /* If we leave a field without filling it out,
    * warn the user that content is required.  */
   const handleInputBlur = (e) => {
-    // Getting the value and name of the input which triggered
-    // the change.
+    // Get the  name of the input field which triggered
+    // the blur.
     const { target } = e;
     const inputName = target.name;
 
@@ -70,6 +71,8 @@ function ContactForm(props) {
       // We want to exit out of this code block if something is wrong
       //  so that the user can correct it.
       return;
+    } else {
+      setErrorMessage("");
     }
 
     alert(
