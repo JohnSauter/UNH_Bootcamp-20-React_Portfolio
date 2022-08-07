@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/UNH_Bootcamp-20-React_Portfolio/static/css/main.346095d8.css",
-    "main.js": "/UNH_Bootcamp-20-React_Portfolio/static/js/main.bf1fc121.js",
+    "main.js": "/UNH_Bootcamp-20-React_Portfolio/static/js/main.5b992c15.js",
     "static/js/787.a2cb61a6.chunk.js": "/UNH_Bootcamp-20-React_Portfolio/static/js/787.a2cb61a6.chunk.js",
     "index.html": "/UNH_Bootcamp-20-React_Portfolio/index.html",
     "main.346095d8.css.map": "/UNH_Bootcamp-20-React_Portfolio/static/css/main.346095d8.css.map",
-    "main.bf1fc121.js.map": "/UNH_Bootcamp-20-React_Portfolio/static/js/main.bf1fc121.js.map",
+    "main.5b992c15.js.map": "/UNH_Bootcamp-20-React_Portfolio/static/js/main.5b992c15.js.map",
     "787.a2cb61a6.chunk.js.map": "/UNH_Bootcamp-20-React_Portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.346095d8.css",
-    "static/js/main.bf1fc121.js"
+    "static/js/main.5b992c15.js"
   ]
 }
