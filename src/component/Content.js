@@ -10,7 +10,7 @@ export default function Content(props) {
       <div className="content_container">
         <span>
           <img
-            src="../assets/images/John_headshot_2007_12_200_200.png"
+            src="./assets/images/John_headshot_2007_12_200_200.png"
             alt="John Sauter portrait"
             width="100px"
           ></img>
@@ -47,7 +47,7 @@ export default function Content(props) {
           computer manufacturer.
         </p>
         <p className="text_2">
-          <a href="../assets/documents/Résumé.pdf" target="_blank">
+          <a href="./assets/documents/Résumé.pdf" target="_blank">
             You can download my résumé by clicking here.
           </a>
         </p>

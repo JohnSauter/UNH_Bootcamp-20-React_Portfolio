@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 /* React component to present a project.  Properties are:
  * title: the name of the project
- * image_href: Location of the picture for this project
+ * image_src: Location of the picture for this project
  * image_alt: alternate text for the image, defaults to screenshot for title
  * URL1: the URL for the GitHub location of the project
  * URL1_label: the label for URL1, defaults to GitHub URL
@@ -19,7 +19,7 @@ function Project(props) {
   }
 
   const title = props.title;
-  const image_href = props.image_href;
+  const image_src = props.image_src;
   let image_alt = props.image_alt;
   if (!image_alt) {
     image_alt = "screenshot for " + title;
@@ -59,7 +59,7 @@ function Project(props) {
       >
         <h1>{title}</h1>
         <p className="project_item_large">
-          <img src={image_href} alt={image_alt} width={image_size} />
+          <img src={image_src} alt={image_alt} width={image_size} />
         </p>
         <p className="project_item_large">
           <a href={URL1} rel="noreferrer" target="_blank">
@@ -82,7 +82,7 @@ function Project(props) {
       >
         <h1>{title}</h1>
         <p className="project_item_small">
-          <img src={image_href} alt={image_alt} width={image_size} />
+          <img src={image_src} alt={image_alt} width={image_size} />
         </p>
         <p className="project_item_small">
           <a href={URL1} rel="noreferrer" target="_blank">
