@@ -59,7 +59,9 @@ function Project(props) {
       >
         <h1>{title}</h1>
         <p className="project_item_large">
-          <img src={image_src} alt={image_alt} width={image_size} />
+          <a href={URL2} rel="noreferrer" target="_blank">
+            <img src={image_src} alt={image_alt} width={image_size}></img>
+          </a>
         </p>
         <p className="project_item_large">
           <a href={URL1} rel="noreferrer" target="_blank">
