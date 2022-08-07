@@ -71,8 +71,6 @@ function ContactForm(props) {
       // We want to exit out of this code block if something is wrong
       //  so that the user can correct it.
       return;
-    } else {
-      setErrorMessage("");
     }
 
     alert(
@@ -81,10 +79,15 @@ function ContactForm(props) {
         "  You can email me at John_Sauter@systemeyescomputerstore.com."
     );
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    // If everything goes according to plan, we want to clear out
+    // the input after a successful registration.
     setUserName("");
+    setUserName_touched(false);
     setMessage("");
+    setMessage_touched(false);
     setEmail("");
+    setEmail_touched(false);
+    setErrorMessage("");
   };
 
   /* Provide a warning message if the name field
