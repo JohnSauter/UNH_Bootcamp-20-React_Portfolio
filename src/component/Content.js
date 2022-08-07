@@ -1,7 +1,7 @@
 /* The content part of the page  */
 import "./Content.css";
 
-import Form from "./Form.js";
+import ContactForm from "./ContactForm.js";
 import Portfolio from "./Portfolio.js";
 
 export default function Content(props) {
@@ -57,8 +57,8 @@ export default function Content(props) {
 
   if (props.section_name === "Contact") {
     return (
-      <div className="form_container">
-        <Form />
+      <div className="contact_form_container">
+        <ContactForm />
       </div>
     );
   }

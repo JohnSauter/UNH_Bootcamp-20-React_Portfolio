@@ -14,7 +14,7 @@
 }
 
 /* However, the contact form uses a fixed space.  */
-.form_container {
+.contact_form_container {
   margin: 20px;
   background: lightcyan;
 }
