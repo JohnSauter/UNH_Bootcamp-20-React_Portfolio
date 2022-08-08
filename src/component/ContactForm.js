@@ -4,6 +4,35 @@ import "./ContactForm.css";
 // is valid
 import { validateEmail } from "../utils/helpers";
 
+/* Function to capitalize the first letter of a string.  */
+function capitalize_first_letter(the_string, locale = navigator.language) {
+  if (the_string && the_string.length > 0) {
+    return the_string.replace(/^\p{CWU}/u, (char) =>
+      char.toLocaleUpperCase(locale)
+    );
+  }
+  return "";
+}
+/* Function to format a warning message from its fragments.  */
+function format_warning(fragments) {
+  let warn_text = "";
+  if (fragments) {
+    fragments.forEach((fragment) => {
+      if (fragment && warn_text) {
+        warn_text = warn_text + "; " + fragment;
+      } else {
+        if (fragment) {
+          warn_text = fragment;
+        }
+      }
+    });
+  }
+  if (warn_text) {
+    warn_text = capitalize_first_letter(warn_text) + ".";
+  }
+  return warn_text;
+}
+
 function ContactForm(props) {
   // Create state variables for the fields in the form.
   // We are also setting their initial values to an empty string.
@@ -98,35 +127,10 @@ function ContactForm(props) {
       setUserWarnMessage("");
     } else {
       if (!userName) {
-        setUserWarnMessage("Name may not be blank");
+        setUserWarnMessage("name may not be blank");
       }
     }
-    let warn_message = userWarnMessage;
-    if (emailWarnMessage && warn_message) {
-      warn_message = warn_message + "; " + emailWarnMessage;
-    } else {
-      if (emailWarnMessage) {
-        warn_message = emailWarnMessage;
-      }
-    }
-    if (messageWarnMessage && warn_message) {
-      warn_message = warn_message + "; " + messageWarnMessage;
-    } else {
-      if (messageWarnMessage) {
-        warn_message = messageWarnMessage;
-      }
-    }
-    if (warn_message) {
-      warn_message = warn_message + ".";
-    }
-    setWarnMessage(warn_message);
-  }, [
-    emailWarnMessage,
-    messageWarnMessage,
-    userName,
-    userName_touched,
-    userWarnMessage,
-  ]);
+  }, [userName, userName_touched]);
 
   /* Do the same for the email and message fields.  */
   useEffect(() => {
@@ -134,70 +138,31 @@ function ContactForm(props) {
       setEmailWarnMessage("");
     } else {
       if (!email) {
-        setEmailWarnMessage("Email may not be blank");
+        setEmailWarnMessage("email may not be blank");
       }
     }
-    let warn_message = userWarnMessage;
-    if (emailWarnMessage && warn_message) {
-      warn_message = warn_message + "; " + emailWarnMessage;
-    } else {
-      if (emailWarnMessage) {
-        warn_message = emailWarnMessage;
-      }
-    }
-    if (messageWarnMessage && warn_message) {
-      warn_message = warn_message + "; " + messageWarnMessage;
-    } else {
-      if (messageWarnMessage) {
-        warn_message = messageWarnMessage;
-      }
-    }
-    if (warn_message) {
-      warn_message = warn_message + ".";
-    }
-    setWarnMessage(warn_message);
-  }, [
-    email,
-    emailWarnMessage,
-    email_touched,
-    messageWarnMessage,
-    userWarnMessage,
-  ]);
+  }, [email, emailWarnMessage, email_touched]);
 
   useEffect(() => {
     if (!message_touched || message) {
       setMessageWarnMessage("");
     } else {
       if (!message) {
-        setMessageWarnMessage("Message may not be blank");
+        setMessageWarnMessage("message may not be blank");
       }
     }
-    let warn_message = userWarnMessage;
-    if (emailWarnMessage && warn_message) {
-      warn_message = warn_message + "; " + emailWarnMessage;
-    } else {
-      if (emailWarnMessage) {
-        warn_message = emailWarnMessage;
-      }
-    }
-    if (messageWarnMessage && warn_message) {
-      warn_message = warn_message + "; " + messageWarnMessage;
-    } else {
-      if (messageWarnMessage) {
-        warn_message = messageWarnMessage;
-      }
-    }
-    if (warn_message) {
-      warn_message = warn_message + ".";
-    }
+  }, [message, message_touched]);
+
+  /* Combine the warnings into one.  */
+  useEffect(() => {
+    let warn_message = format_warning([
+      userWarnMessage,
+      emailWarnMessage,
+      messageWarnMessage,
+    ]);
+
     setWarnMessage(warn_message);
-  }, [
-    emailWarnMessage,
-    message,
-    messageWarnMessage,
-    message_touched,
-    userWarnMessage,
-  ]);
+  }, [userWarnMessage, emailWarnMessage, messageWarnMessage]);
 
   return (
     <div>
