@@ -141,7 +141,7 @@ function ContactForm(props) {
         setEmailWarnMessage("email may not be blank");
       }
     }
-  }, [email, emailWarnMessage, email_touched]);
+  }, [email, email_touched]);
 
   useEffect(() => {
     if (!message_touched || message) {
