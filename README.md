@@ -41,6 +41,10 @@ GNU AGPLv3
 
 There is good feedback when entering data in the Contact form.
 
+## Screenshot
+
+![screenshot of React Portfolio](./assets/images/screenshot.png)
+
 ## Questions
 
 If you have any questions, contact me.
