@@ -9,6 +9,7 @@ import React, { useState } from "react";
  * URL1_label: the label for URL1, defaults to GitHub URL
  * URL2: the URL for the deployement or walkthrough
  * URL2_label: the label for URL2, defaults to Deployment URL
+ * description: a brief description of the project
  */
 function Project(props) {
   const [the_size, setThe_size] = useState("small");
@@ -42,6 +43,7 @@ function Project(props) {
   } else {
     image_size = "250px";
   }
+  const description = props.description;
 
   function handle_mouse_enter(e) {
     setThe_size("large");
@@ -73,6 +75,7 @@ function Project(props) {
             {URL2_label}
           </a>
         </p>
+        <p className="project_item_large">{description}</p>
       </div>
     );
   } else {
@@ -96,6 +99,7 @@ function Project(props) {
             {URL2_label}
           </a>
         </p>
+        <p className="project_item_small">{description}</p>
       </div>
     );
   }

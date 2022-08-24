@@ -26,6 +26,7 @@
   margin: 5px;
   margin-block-start: 5px;
   margin-block-end: 5px;
+  max-width: 300px;
 }
 
 .project_container_small {

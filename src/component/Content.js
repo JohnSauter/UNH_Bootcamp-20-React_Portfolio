@@ -35,21 +35,46 @@ export default function Content(props) {
     );
   }
 
+  if (props.section_name === "Technical_skills") {
+    return (
+      <div className="content_container">
+        
+        <p className="text_2">
+          I am skilled in using HTML, CSS, 
+          JavaScript, Node.js and 
+          their many companion packages
+          to create both the front-end
+          and back-end parts of a web application.
+        </p>
+        <p className="text_2">
+          In addition to JavaScript I can code in C, Python, 
+          Bliss, Basic, Ada, Fortran, SQL and assembly
+          language for a variety of computers.  
+          I have written batch, interactive
+          and real-time software.
+        </p>
+      </div>
+    );
+  }
+
   if (props.section_name === "Résumé") {
     return (
       <div className="content_container">
         <p className="text_2">
-          With over 50 years of experience in the computer industry, my résumé
-          is quite long. I have worked as a system programmer for the Stanford
-          Artificial Intelligence project and for Sanders Associates, a military
-          contractor. I worked as a Software Engineer for Digital Equipment
-          Corporation, creating and maintaining products for a world-class
-          computer manufacturer.
-        </p>
-        <p className="text_2">
           <a href="./assets/documents/Résumé.pdf" target="_blank">
             You can download my résumé by clicking here.
           </a>
+        </p>
+        <p className="text_2">
+          Beyond what is detailed on my résumé, I have worked
+          as a system programmer for the 
+          Stanford Artificial Intelligence project 
+          and for Sanders Associates, a military
+          contractor. I have also worked as a 
+          Software Engineer for Digital Equipment
+          Corporation, creating and maintaining 
+          products for a world-class
+          computer manufacturer.
         </p>
       </div>
     );

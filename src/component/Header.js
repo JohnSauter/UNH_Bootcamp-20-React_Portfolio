@@ -7,6 +7,7 @@ import "./Header.css";
  * Props contains the name if the item currently selected
  * and the function to call when the item is clicked.
  */
+
 function AboutMe(props) {
   let selectedQ = "";
   if (props.section_name === "About_me") {
@@ -17,6 +18,19 @@ function AboutMe(props) {
   return (
     <span className={selectedQ} onClick={props.onClick}>
       About Me
+    </span>
+  );
+}
+function TechnicalSkills(props) {
+  let selectedQ = "";
+  if (props.section_name === "Technical_skills") {
+    selectedQ = "selected";
+  } else {
+    selectedQ = "not_selected";
+  }
+  return (
+    <span className={selectedQ} onClick={props.onClick}>
+      Technical Skills
     </span>
   );
 }
@@ -65,13 +79,16 @@ function Résumé(props) {
 
 /* Display my name.  */
 function Name(props) {
-  return (<span className="my_name">John Sauter</span>);
+  return <span className="my_name">John Sauter</span>;
 }
 
 export default function Header(props) {
   /* Functions to respond to clicks on header items  */
   function click_about_me(e) {
     props.setSection_name("About_me");
+  }
+  function click_technical_skills(e) {
+    props.setSection_name("Technical_skills");
   }
   function click_portfolio(e) {
     props.setSection_name("Portfolio");
@@ -87,6 +104,10 @@ export default function Header(props) {
     <nav className="header_container">
       <Name />
       <AboutMe section_name={props.section_name} onClick={click_about_me} />
+      <TechnicalSkills
+        section_name={props.section_name}
+        onClick={click_technical_skills}
+      />
       <Portfolio section_name={props.section_name} onClick={click_portfolio} />
       <Contact section_name={props.section_name} onClick={click_contact} />
       <Résumé section_name={props.section_name} onClick={click_résumé} />

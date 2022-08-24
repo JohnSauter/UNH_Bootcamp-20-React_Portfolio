@@ -27,7 +27,8 @@ https://johnsauter.github.io/UNH_Bootcamp-20-React_Portfolio/
 
 ## Usage
 
-You will see tabs for About Me, Portfolio, Contact and Résumé.
+You will see tabs for About Me, Technical Skills, 
+Portfolio, Contact and Résumé.
 
 ## Credits
 
