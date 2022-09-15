@@ -23,12 +23,12 @@ export default function Content(props) {
         </p>
         <p className="text_2">
           I have worked in many roles in academia and industry, including team
-          leader, product development, implementation, quality assurance and
+          lead, product development, implementation, quality assurance and
           customer support. As a Principal Software Engineer I developed
           products for Digital Equipment Corporation, a world-class computer
-          manufacturer. In September 2022 I will receive a certificate in
+          manufacturer. In September 2022 I received a certificate in
           full-stack coding from the University of New Hampshire. That training
-          will provide me with experience in JavaScript and its add-on modules
+          has provided me with experience in JavaScript and its add-on modules
           for front-end and back-end development. I am looking for a permanent,
           full-time position that will let me exercise and develop my computer
           programming skills.
