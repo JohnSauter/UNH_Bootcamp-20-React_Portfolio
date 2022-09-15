@@ -32,3 +32,21 @@
   text-align: justify;
   margin-right: auto;
 }
+
+/* The contact container has several paragraphs,
+ * some indented with required line breaks.  */
+
+ .contact_container {
+  background: lightcyan;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+ }
+
+.text_pre {
+  text-align: justify;
+  margin-right: auto;
+  white-space: pre-line;
+  margin-left: 15px;
+}
