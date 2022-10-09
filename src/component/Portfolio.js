@@ -42,7 +42,7 @@ function Portfolio(props) {
             title="Weather Dashboard"
             image_src="./assets/images/Weather_Dashboard.png"
             URL1="https://github.com/JohnSauter/UNH_bootcamp-06-Weather_Dashboard"
-            URL2="https://johnsauter.github.io/UNH_bootcamp-06-Weather_Dashboard/"
+            URL2="https://johnsauter.github.io/Weather_Dashboard/"
             description="Uses HTML, CSS, JavaScript, JQuery, Bootstrap, Moment, 
             and two external web sites to display the weather at a specified location."
           />
