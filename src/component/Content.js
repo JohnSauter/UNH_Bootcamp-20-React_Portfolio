@@ -120,7 +120,7 @@ export default function Content(props) {
         <p className="text_2">
           I do not communicate using text messages or FaceBook,
           but if you would like to use Google Meet or Zoom
-          contact me by email or telephone can we can make
+          contact me by email or telephone so we can make
           arrangements.
         </p>
         <p className="text_2">
