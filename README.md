@@ -15,7 +15,7 @@ Show my work to persons interested in a React-capable programmer.
 
 git clone https://github.com/JohnSauter/UNH_Bootcamp-20-React_Portfolio.git
 
-cd https://github.com/JohnSauter/UNH_Bootcamp-20-React_Portfolio
+cd UNH_Bootcamp-20-React_Portfolio
 
 npm install
 
